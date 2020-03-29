@@ -1,0 +1,6 @@
+<markers>
+<marker id="1" name="Test1" address="Dubrovačka" lat="45.560230" lng="18.670490" type="Zona 1"/>
+<marker id="2" name="Test2" address="Županijska" lat="45.557790" lng="18.670490" type="Zona 2"/>
+<marker id="3" name="Test3" address="Ružina" lat="45.557710" lng="18.673530" type="Zona 3"/>
+<marker id="4" name="Test4" address="Biševska" lat="45.5469189" lng="18.7125018" type="BP"/>
+</markers>

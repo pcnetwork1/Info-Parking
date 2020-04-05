@@ -9,6 +9,8 @@ class MapaController extends Controller
 
     public function index()
     {
-        $this->view->render('privatno' . DIRECTORY_SEPARATOR . 'mapa' . DIRECTORY_SEPARATOR . 'index');
+        $this->view->render('privatno' . DIRECTORY_SEPARATOR . 'mapa' . DIRECTORY_SEPARATOR . 'index',[
+            'podaci'=>Mapa::readAll()
+        ]);
     }
 }

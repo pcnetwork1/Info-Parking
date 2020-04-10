@@ -1,1 +1,48 @@
-Hello from unos
+<form class="log-in-form" method="POST"
+action="/unos/dodajnovi">
+ <label>Naziv
+    <input type="text" id="name" name="name" value="<?php 
+    echo isset($_POST['name']) ? $_POST['name'] : '' 
+    ?>">
+  </label>
+
+  <label>Adresa
+    <input type="text" id="address" name="address">
+  </label>
+  <label for="zona">Odaberi zonu</label>
+  <select name="Zona">
+          <option value="1">Zona 1</option>
+          <option value="2">Zona 2</option>
+          <option value="3">Zona 3</option>
+          <option value="4">BP</option>
+        </select><br>
+  <label>lat
+    <input type="float" id="lat" name="lat" value="<?php 
+    echo isset($_POST['lat']) ? $_POST['lat'] : '' 
+    ?>">
+  </label>
+
+  <label>lng
+    <input type="float" id="lng" name="lng" value="<?php 
+    echo isset($_POST['lng']) ? $_POST['lng'] : '' 
+    ?>">
+  </label>
+
+  <div class="grid-x grid-margin-x">
+    <div class="large-6 cell">
+      <a href="/unos/index" class="alert button expanded">Odustani</a>
+    </div>
+    <div class="large-6 cell">
+      <input type="submit" class="button expanded" value="Dodaj lokaciju"></input>
+    </div>
+
+<div>
+
+<h1>Ovdje ide adresa u kordinate konverter</h1>
+
+</div>
+
+
+  </div>
+  
+</form>

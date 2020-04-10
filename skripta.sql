@@ -2,15 +2,16 @@ Drop database if exists infoparking;
 create database infoparking;
 use infoparking;
 
-
 CREATE TABLE `markers` (
-  `id` INT AUTO_INCREMENT PRIMARY KEY ,
-  `name` VARCHAR( 60 ) NOT NULL ,
-  `address` VARCHAR( 80 ) NOT NULL ,
-  `lat` FLOAT( 10, 6 ) NOT NULL ,
-  `lng` FLOAT( 10, 6 ) NOT NULL ,
-  `type` VARCHAR( 30 ) NOT NULL
-) ENGINE = MYISAM ;
+  `id` int(4) NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `address` varchar(150) NOT NULL,
+  `type` varchar(20) NOT NULL,
+  `lat` float(10,6) DEFAULT NULL,
+  `lng` float(10,6) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
 
 create table operater(
 sifra       int not null primary key auto_increment,

@@ -1,13 +1,18 @@
 <?php
+	class DbConnect {
+		private $host = 'localhost';
+		private $dbName = 'infoparking';
+		private $user = 'edunova';
+		private $pass = 'edunova';
 
-class Mapa
-{
-    public static function readAll()
-    {
-        $veza = DB::getInstanca();
-        $izraz = $veza->prepare('select id, 
-        name, address, lat, lng, type from markers where id>1');
-        $izraz->execute();
-        return $izraz->fetchAll();
-    }
-}
+		public function connect() {
+			try {
+				$conn = new PDO('mysql:host=' . $this->host . '; dbname=' . $this->dbName, $this->user, $this->pass);
+				$conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+				return $conn;
+			} catch( PDOException $e) {
+				echo 'Database Error: ' . $e->getMessage();
+			}
+		}
+	}
+ ?>

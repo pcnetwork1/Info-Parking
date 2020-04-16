@@ -1,8 +1,8 @@
 <?php
 	class DbConnect {
 		private $host = 'localhost';
-		private $dbName = 'cerera_edunovapp20';
-		private $user = 'cerera_edunova';
+		private $dbName = 'infoparking';
+		private $user = 'edunova';
 		private $pass = 'edunova';
 
 		public function connect() {

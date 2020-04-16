@@ -8,10 +8,6 @@ function loadMap() {
       center: Osijek
     });
 
-    var marker = new google.maps.Marker({
-      position: Osijek,
-      map: map
-    });
 
     var cdata = JSON.parse(document.getElementById('data').innerHTML);
     geocoder = new google.maps.Geocoder();

@@ -12,6 +12,13 @@ class UnosController extends Controller
         $this->view->render('privatno' . DIRECTORY_SEPARATOR . 'unos' . DIRECTORY_SEPARATOR . 'index');
     }
 
+    public function novi()
+    {
+        $this->view->render($this->viewDir . 'novi',
+            ['poruka'=>'Popunite sve tražene podatke']
+        );
+    }
+
     public function dodajnovi()
     {
         //prvo dođu sve silne kontrole

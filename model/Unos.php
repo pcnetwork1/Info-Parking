@@ -5,7 +5,7 @@ class Unos
     public static function readAll()
     {
         $veza = DB::getInstanca();
-        $izraz = $veza->prepare('select id, 
+        $izraz = $veza->prepare('select sifra, 
         name, address, type, lat, lng from markers where id>1');
         $izraz->execute();
         return $izraz->fetchAll();
@@ -14,7 +14,7 @@ class Unos
     public static function read($id)
     {
         $veza = DB::getInstanca();
-        $izraz = $veza->prepare('select id, 
+        $izraz = $veza->prepare('select sifra, 
         name, address, type, lat, lng from markers
         where id=:id');
         $izraz->execute(['id'=>$id]);
@@ -24,8 +24,9 @@ class Unos
     public static function create()
     {
         $veza = DB::getInstanca();
-        $izraz=$veza->prepare('inslat, lng) values 
-        (:name,:address,:type,:lat,:lng)');
+        $izraz=$veza->prepare('insert into markers 
+        (name,address,type,lat,Operater,lng) values 
+        (:name,:address,:type,:lat,:Operater,:lng)');
         $izraz->execute($_POST);
     }
 }

@@ -51,6 +51,16 @@ alter table Korisnik add foreign key (markers) references markers(sifra);
 //INSERT INTO `markers` (`sifra`, `name`, `address`, `type`, `lat`, `Operater`, `lng`) VALUES
 (1, 'College of Engineering Pune', 'Wellesley Road, Shivajinagar, Pune, Maharashtra 411005', 'college', 45.5587,1, 18.6758);
 
+insert into operater values 
+(null,'edunova@edunova.hr',
+'$2y$10$AzFzPK10Gi3nYBfpVKGYPeiyeQ8JOQOkfGJJ1jKJnQ.2hacJ2iwBi',
+'Edunova','Operater','oper',true,null);
+insert into operater values 
+(null,'admin@edunova.hr',
+'$2y$10$AzFzPK10Gi3nYBfpVKGYPeiyeQ8JOQOkfGJJ1jKJnQ.2hacJ2iwBi',
+'Edunova','Administrator','admin',true,null);
+
+
 
 
 

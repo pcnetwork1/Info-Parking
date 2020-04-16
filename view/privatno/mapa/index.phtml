@@ -51,6 +51,26 @@
 		<div id="map"></div>
 	</div>
 
+		<div>
+		
+		<table>
+    <thead>
+        <tr>
+            <th>Naziv</th>
+            <th>Adresa</th>
+            <th>Zona</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php 
+        foreach($podaci as $red){
+            include 'tablica.phtml';
+		}
+		
+        ?>
+    </tbody>
+</table>
+
   </body>
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBo6VrULwKmbd6Lvey_y3U_CO4gCcBCIOU&callback=loadMap">

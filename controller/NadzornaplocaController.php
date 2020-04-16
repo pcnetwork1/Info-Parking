@@ -1,11 +1,16 @@
 <?php
 
-class NadzornaplocaController extends AutorizacijaController
+class NadzornaplocaController extends Controller
 {
+    
+    private $viewDir = 'privatno' .
+    DIRECTORY_SEPARATOR . 'nadzornaPloca' . DIRECTORY_SEPARATOR;
+
 
     public function index()
     {
-        $this->view->render('privatno' . DIRECTORY_SEPARATOR . 'nadzornaPloca');
+        $this->view->render($this->viewDir . 'index',[
+         'podaci'=>NP::readAll()
+     ]);
     }
-
 }

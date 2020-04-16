@@ -24,9 +24,12 @@ class Unos
     public static function create()
     {
         $veza = DB::getInstanca();
+        $_POST['Operater']=$_SESSION['operater']->sifra;
         $izraz=$veza->prepare('insert into markers 
         (name,address,type,lat,Operater,lng) values 
         (:name,:address,:type,:lat,:Operater,:lng)');
         $izraz->execute($_POST);
-    }
+
+        print_r($_POST);
+}
 }

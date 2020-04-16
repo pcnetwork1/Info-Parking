@@ -9,18 +9,24 @@ action="/unos/dodajnovi">
   <label>Adresa
     <input type="text" id="address" name="address">
   </label>
-  <label for="zona">Odaberi zonu</label>
-  <select name="Zona">
-          <option value="1">Zona 1</option>
-          <option value="2">Zona 2</option>
-          <option value="3">Zona 3</option>
-          <option value="4">BP</option>
-        </select><br>
+  
+  
+  <div class="form-group">
+        <label for="type">Zona</label>
+        <select id="type" name="type" class="form-control">
+            <option>BP</option>
+            <option>Zona 1</option>
+            <option>Zona 2</option>
+            <option>Zona 3</option>
+        </select>
+    </div>
+
   <label>lat
     <input type="float" id="lat" name="lat" value="<?php 
     echo isset($_POST['lat']) ? $_POST['lat'] : '' 
     ?>">
   </label>
+
 
   <label>lng
     <input type="float" id="lng" name="lng" value="<?php 

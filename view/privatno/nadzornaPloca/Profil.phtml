@@ -1,0 +1,19 @@
+
+
+                <table>
+                <thead>
+                    <tr>
+                        <th>Ime</th>
+                        <th>Prezime</th>
+                        <th>Email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php 
+                    foreach($podaci as $red){
+                        include 'ProfilBaza.phtml';
+                    }
+                    
+                    ?>
+                </tbody>
+            </table>

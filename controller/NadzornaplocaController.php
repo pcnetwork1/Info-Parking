@@ -13,4 +13,12 @@ class NadzornaplocaController extends Controller
          'podaci'=>NP::readAll()
      ]);
     }
+
+    public function profil()
+    {
+        $this->view->render($this->viewDir . 'profil', [
+            'podaci'=>Profil::readAll()
+
+        ]);
+    }
 }

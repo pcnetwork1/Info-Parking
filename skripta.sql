@@ -31,25 +31,17 @@ email       varchar(50) not null,
 lozinka     char(60) not null,
 ime         varchar(50) not null,
 prezime     varchar(50) not null,
-Osobni_podatci int not null,
-Markers int not null,
+uloga       varchar(20) not null,
 aktivan     boolean not null default true,
 sessionid   varchar(100)
 );
 
-create table Osobni_podatci(
-sifra           int not null primary key auto_increment,
-registracija    varchar(20) not null,
-Model_auta      varchar(50) not null,
-Vrsta           varchar(50) not null
-);
-
 alter table markers add foreign key (Operater) references Operater(sifra);
-alter table Korisnik add foreign key (Osobni_podatci) references Osobni_podatci(sifra);
+alter table Korisnik add foreign key (Operater) references operater(sifra);
 alter table Korisnik add foreign key (markers) references markers(sifra);
 
-//INSERT INTO `markers` (`sifra`, `name`, `address`, `type`, `lat`, `Operater`, `lng`) VALUES
-(1, 'College of Engineering Pune', 'Wellesley Road, Shivajinagar, Pune, Maharashtra 411005', 'college', 45.5587,1, 18.6758);
+--INSERT INTO `markers` (`sifra`, `name`, `address`, `type`, `lat`, `Operater`, `lng`) VALUES-->
+--(1, 'College of Engineering Pune', 'Wellesley Road, Shivajinagar, Pune, Maharashtra 411005', 'college', 45.5587,1, 18.6758);-->
 
 insert into operater values 
 (null,'edunova@edunova.hr',

@@ -3,4 +3,11 @@
     <td><?php echo $red->name?></td>
     <td><?php echo $red->address?></td>
     <td><?php echo $red->type?></td>
+    <?php if(isset($_SESSION['operater']) && $_SESSION['operater']->uloga==='admin'):?>
+    <a href="/operater/promjena?sifra=<?php echo $red->sifra ?>"><i title="Promjeni" class="fas fa-edit fa-2x"></i></a> 
+    <a onclick="return confirm('Sigurno obrisati <?php echo $red->ime . ' ' . $red->prezime ?> ');" href="/operater/obrisi?sifra=<?php echo $red->sifra ?>"><i title="Obriši" class="fas fa-trash fa-2x" style="color: red;"></i></a>
+    <?php else:?>
+                
+                <?php endif;?>
+
 </tr>

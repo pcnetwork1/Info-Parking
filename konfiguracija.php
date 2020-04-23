@@ -2,14 +2,14 @@
 
 return [
     'nazivAPP' => 'Parking Info',
-    'url' => 'http://polaznik36.edunova.hr/',
+    'url' => 'http://192.168.1.111:8/',
     'dev' => true,
     'rezultataPoStranici' => 6,
 
     'db' =>[
-        'server' => 'localhost',
-        'baza' => 'cerera_edunovapp20',
-        'korisnik' => 'cerera_edunova',
+        'server' => '192.168.1.111:3306',
+        'baza' => 'infoparking',
+        'korisnik' => 'edunova',
         'lozinka' => 'edunova'
     ]
 ];

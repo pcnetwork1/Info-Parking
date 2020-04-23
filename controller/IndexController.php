@@ -158,7 +158,7 @@ class IndexController extends Controller
         }
 
         $veza = DB::getInstanca();
-        $izraz = $veza->prepare('select * from korisnik 
+        $izraz = $veza->prepare('select * from Korisnik 
                       where email=:email and aktivan=true;');
         $izraz->execute(['email'=>$_POST['email']]);
         //$rezultat=$izraz->fetch(PDO::FETCH_OBJ);

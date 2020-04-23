@@ -25,7 +25,7 @@ aktivan     boolean not null default true,
 sessionid   varchar(100)
 );
 
-create table korisnik(
+create table Korisnik(
 sifra       int not null primary key auto_increment,
 email       varchar(50) not null,
 lozinka     char(60) not null,

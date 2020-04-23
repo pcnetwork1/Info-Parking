@@ -27,11 +27,17 @@
             
 
 <!-- OVDJE IDE IF ZA KORISNIKA I OPERATER/ADMINA -->
-
+            <?php if(isset($_SESSION['operater']) && $_SESSION['operater']->uloga==='admin'):?>
                 <li>
            <a href="/nadzornaploca/profil">Profil 
           </a>
            </li>
+           <?php else:?>
+
+        <?php endif;?>
+
+
+
        
 
 

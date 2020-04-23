@@ -6,7 +6,7 @@ class Korisnik
     {
         $veza = DB::getInstanca();
         $izraz = $veza->prepare('select sifra, 
-        ime, prezime, uloga, email, aktivan from korisnik where sifra>1');
+        ime, prezime, uloga, email, aktivan from Korisnik where sifra>1');
         $izraz->execute();
         return $izraz->fetchAll();
     }
@@ -15,7 +15,7 @@ class Korisnik
     {
         $veza = DB::getInstanca();
         $izraz = $veza->prepare('select sifra, 
-        ime, prezime, uloga, email from korisnik
+        ime, prezime, uloga, email from Korisnik
         where sifra=:sifra');
         $izraz->execute(['sifra'=>$sifra]);
         return $izraz->fetch();
@@ -34,7 +34,7 @@ class Korisnik
     }
 
 
-    //nije osnovno - Anita ovo ne trebaš u prvom laufu učiti
+   
     public static function registrirajnovi()
     {
         $veza = DB::getInstanca();
@@ -56,7 +56,7 @@ class Korisnik
     {
         try{
             $veza = DB::getInstanca();
-            $izraz=$veza->prepare('delete from korisnik where sifra=:sifra');
+            $izraz=$veza->prepare('delete from Korisnik where sifra=:sifra');
             $izraz->execute($_GET);
         }catch(PDOException $e){
             echo $e->getMessage();
@@ -67,16 +67,16 @@ class Korisnik
 
     public static function update(){
         $veza = DB::getInstanca();
-        $izraz=$veza->prepare('update korisnik 
+        $izraz=$veza->prepare('update Korisnik 
         set email=:email,ime=:ime,
         prezime=:prezime,uloga=:uloga where sifra=:sifra');
         $izraz->execute($_POST);
     }
 
-    //nije osnovno - Anita ovo ne trebaš u prvom laufu učiti
+   
     public static function zavrsiregistraciju($id){
         $veza = DB::getInstanca();
-        $izraz=$veza->prepare('update korisnik 
+        $izraz=$veza->prepare('update Korisnik 
         set aktivan=true where sessionid=:sessionid');
         $izraz->execute(['sessionid'=>$id]);
     }

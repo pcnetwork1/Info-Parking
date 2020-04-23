@@ -10,7 +10,7 @@ class KorisnikController extends Controller
     public function index()
     {
         $this->view->render($this->viewDir . 'index',[
-         'podaci'=>korisnik::readAll()
+         'podaci'=>Korisnik::readAll()
      ]);
     }
 
@@ -24,7 +24,7 @@ class KorisnikController extends Controller
     public function dodajnovi()
     {
         //prvo dođu sve silne kontrole
-        korisnik::create();
+        Korisnik::create();
         $this->index();
     }
 
@@ -33,7 +33,7 @@ class KorisnikController extends Controller
     public function obrisi()
     {
         //prvo dođu silne kontrole
-        if(korisnik::delete()){
+        if(Korisnik::delete()){
             header('location: /korisnik/index');
         }
         
@@ -41,7 +41,7 @@ class KorisnikController extends Controller
 
     public function promjena()
     {
-        $korisnik = korisnik::read($_GET['sifra']);
+        $korisnik = Korisnik::read($_GET['sifra']);
         if(!$korisnik){
             $this->index();
             exit;

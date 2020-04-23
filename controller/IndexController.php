@@ -185,6 +185,11 @@ class IndexController extends Controller
         $npc->index();
     }
 
+    public function Era()
+    {
+        $this->view->render('Era');
+    }
+
 
 
 }

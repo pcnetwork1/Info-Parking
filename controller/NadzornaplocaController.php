@@ -14,9 +14,9 @@ class NadzornaplocaController extends Controller
      ]);
     }
 
-    public function profil()
+    public function Profil()
     {
-        $this->view->render($this->viewDir . 'profil', [
+        $this->view->render($this->viewDir . 'Profil', [
             'podaci'=>Profil::readAll()
 
         ]);
